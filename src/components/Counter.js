@@ -12,7 +12,7 @@ const Counter = () => {
   };
 
   const increaseHandler = () => {
-    dispatch(counterAction.increaseBy5(10));
+    dispatch(counterAction.increaseBy5(10)); // payload comes from redux toolkit directly
   };
 
   const decrementHandler = () => {
