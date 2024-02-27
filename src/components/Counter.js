@@ -1,6 +1,6 @@
 import classes from "./Counter.module.css";
 import { useSelector, useDispatch } from "react-redux";
-import { counterAction } from "../store";
+import { counterAction } from "../store/counterSlice";
 // import { Component } from "react";
 
 const Counter = () => {
@@ -14,16 +14,12 @@ const Counter = () => {
   const increaseHandler = () => {
     dispatch(counterAction.increaseBy5(10)); // payload comes from redux toolkit directly
   };
-
   const decrementHandler = () => {
     dispatch(counterAction.decrement());
   };
 
   const toggleCounterHandler = () => {
     dispatch(counterAction.toggle());
-    console.log("good");
-    console.log(counter);
-    console.log(showCounter);
   };
 
   return (
